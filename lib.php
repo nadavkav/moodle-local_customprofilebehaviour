@@ -34,13 +34,16 @@ function local_customprofilebehaviour_before_http_headers() {
     }
 
     // Only using custom profile fields names that starts with "cpf_"
-    foreach ($USER->profile as $class => $value) {
-        if (strpos($class,'cpf') == 0 and $value == 1) {
-            // Remove 'cpf' prefix ?
-            //$bodyclass = substr($class, 3);
-            $PAGE->add_body_class($class);
+    if (!empty($USER->profile)) {
+        foreach ($USER->profile as $class => $value) {
+            if (strpos($class,'cpf') == 0 and $value == 1) {
+                // Remove 'cpf' prefix ?
+                //$bodyclass = substr($class, 3);
+                $PAGE->add_body_class($class);
+            }
         }
     }
+
     // Hardcoded styles - disabled.
     //$PAGE->requires->css('/local/customprofilebehaviour/styles.css');
     echo html_writer::nonempty_tag('style', $style );
