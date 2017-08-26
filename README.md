@@ -17,6 +17,7 @@ has enabled his/her custom profile field "cpfvisual" that indicate she/he needs 
 * Add at least one "checkbox" type custom profile field, that starts with "cpf".
 * Go to any user profile and enable the above custom field.
 * Add some custom CSS on the https://your-moodle/admin/settings.php?section=local_customprofilebehaviour
+  (Site administration > Appearance > Custom UI behaviour based on user profile fields)
 
 ## License ##
 
